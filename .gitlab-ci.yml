@@ -22,7 +22,7 @@ maven-build:
     - "mvn package -DskipTests"
   artifacts:
     paths:
-      - target/*.jar
+      - target/*.war
 
 build-docker:
   image: docker
