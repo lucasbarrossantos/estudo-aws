@@ -2,24 +2,21 @@ version: 0.2
 
 phases:
   install:
-    commands:
-      - echo Entering install phase...
-      - wget http://mirror.olnevhost.net/pub/apache/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz
-      - tar xzvf apache-maven-3.3.9-bin.tar.gz -C /opt/
-      - export PATH=/opt/apache-maven-3.3.9/bin:$PATH
     runtime-versions:
       java: corretto11
+    commands:
+      - yum update -y
+      - yum install -y maven
   build:
     commands:
       - echo Build started on `date`
-      - mvn clean install
+      - mvn install
   post_build:
     commands:
       - echo Build completed on `date`
       - mvn package
 artifacts:
   files:
-    - target/estudoapp.war
+    - target/*.war
     - appspec.yml
-    - Scripts/*
   discard-paths: yes

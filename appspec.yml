@@ -1,18 +1,5 @@
 version: 0.0
 os: linux
 files:
-  - source: /target/estudoapp.war
-    destination: /home/ec2-user/app
-hooks:
-  ApplicationStop:
-    - location: app_stop.sh
-      timeout: 300
-      runas: root
-  BeforeInstall:
-    - location: install_dependencies.sh
-      timeout: 300
-      runas: root
-  ApplicationStart:
-    - location: Scripts/app_start.sh
-      timeout: 300
-      runas: root
+  - source: ./target/*.war
+    destination: /tmp
