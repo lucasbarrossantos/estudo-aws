@@ -3,15 +3,15 @@ version: 0.0
 os: linux
 
 files:
-  - source: /estudoapp.jar
+  - source: target/estudoapp.jar
     destination: /tmp
 
 hooks:
   ApplicationStop:
-    - location: stop-process.sh
+    - location: scripts/stop-process.sh
       timeout: 180
       runas: root
   ApplicationStart:
-    - location: start-process.sh
+    - location: scripts/start-process.sh
       timeout: 180
       runas: root
