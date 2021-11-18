@@ -4,16 +4,14 @@ phases:
   install:
     runtime-versions:
       java: corretto11
+  post_build:
     commands:
-      - yum update -y
-      - yum install -y maven
-  build:
-    commands:
-      - echo Build started on `date`
-      - mvn install
+      - echo Build completed on `date`
+      - mvn package
+      - mv target/estudoapp.war estudoapp.war
 artifacts:
   files:
-    - target/*.war
+    - estudoapp.war
     - appspec.yml
     - scripts/**
   discard-paths: yes
