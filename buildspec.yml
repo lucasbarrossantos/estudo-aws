@@ -22,6 +22,5 @@ artifacts:
   files:
     - target/estudoapp.war
     - appspec.yml
-    - scripts/start-process.sh
-    - scripts/stop-process.sh
+    - Scripts/**/*
   discard-paths: yes
