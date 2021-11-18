@@ -1,5 +1,14 @@
 version: 0.0
 os: linux
 files:
-  - source: ./estudoapp.war
+  - source: target/estudoapp.war
     destination: /tmp
+hooks:
+  ApplicationStop:
+    - location: scripts/stop-process.sh
+      timeout: 200
+      runas: root
+  ApplicationStart:
+    - location: scripts/start-process.sh
+      timeout: 200
+      runas: root

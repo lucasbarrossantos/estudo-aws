@@ -4,14 +4,11 @@ phases:
   install:
     runtime-versions:
       java: corretto11
-  pre_build:
-    commands:
-      - echo Nothing to do in the pre_build phase...
   build:
     commands:
       - echo Build started on `date`
       - mvn test
-      - mvn install
+      - mvn clean install
   post_build:
     commands:
       - echo Build completed on `date`
@@ -19,3 +16,7 @@ phases:
 artifacts:
   files:
     - target/estudoapp.war
+    - appspec.yml
+    - scripts/start-process.sh
+    - scripts/stop-process.sh
+  discard-paths: yes
