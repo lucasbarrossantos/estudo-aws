@@ -1,3 +1,3 @@
 #!/bin/bash
 
-java -jar /tmp/estudoapp.war > /dev/null 2> /dev/null < /dev/null &
+java -jar /home/ec2-user/app/estudoapp.war
