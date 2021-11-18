@@ -11,4 +11,3 @@ artifacts:
     - appspec.yml
     - scripts/start-process.sh
     - scripts/stop-process.sh
-  discard-paths: yes
