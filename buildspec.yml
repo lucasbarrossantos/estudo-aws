@@ -1,15 +1,15 @@
 version: 0.2
-
 phases:
-  install:
-    runtime-versions:
-      java: corretto11
-
   build:
     commands:
-      - mvn clean install
-
+      - echo Build started on `date`
+      - mvn test
+  post_build:
+    commands:
+      - echo Build completed on `date`
+      - mvn package
 artifacts:
   files:
-    - target/estudoapp.jar
     - appspec.yml
+    - target/estudoapp.war
+  discard-paths: yes
