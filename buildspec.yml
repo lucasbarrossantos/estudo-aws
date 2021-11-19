@@ -13,5 +13,3 @@ artifacts:
   files:
     - target/estudoapp.jar
     - appspec.yml
-    - scripts/start-process.sh
-    - scripts/stop-process.sh
