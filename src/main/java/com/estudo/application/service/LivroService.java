@@ -16,9 +16,9 @@ public class LivroService implements LivroServicePort {
                 .singletonList(
                         LivroDTO.builder()
                                 .autor("Lucas Barros Santos")
-                                .nome("Aprendendo cloud na AWS!")
+                                .nome("Pipeline of a Spring Boot Application on AWS!")
                                 .dataHoraPublicacao(LocalDateTime.now())
-                                .descricao("Livro para quem quer aprender cloud")
+                                .descricao("")
                                 .build());
     }
 
