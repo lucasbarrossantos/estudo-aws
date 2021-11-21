@@ -1,7 +1,7 @@
 version: 0.0
 os: linux
 files:
-  - source: ./estudoapp.war
+  - source: estudoapp.war
     destination: /home/ec2-user/application/target
 hooks:
   ApplicationStop:
