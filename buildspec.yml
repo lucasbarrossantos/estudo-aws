@@ -14,3 +14,4 @@ artifacts:
     - target/estudoapp.war
     - appspec.yml
     - script/*
+    - ./mvnw
