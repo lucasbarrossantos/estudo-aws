@@ -12,14 +12,14 @@ permissions:
 
 hooks:
   ApplicationStop:
-    - location: script/script_stop_server.sh
+    - location: script_stop_server.sh
       timeout: 30
       runas: ec2-user
   Install:
-    - location: script/script_install.sh
+    - location: script_install.sh
       timeout: 400
       runas: ec2-user
   ApplicationStart:
-    - location: script/script_start_server.sh
+    - location: script_start_server.sh
       timeout: 300
       runas: ec2-user
