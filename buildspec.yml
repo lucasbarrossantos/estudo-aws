@@ -12,3 +12,4 @@ phases:
 artifacts:
   files:
     - target/estudoapp.war
+    - script/**
