@@ -1,5 +1,2 @@
 #!/bin/sh
-sudo rm -r /home/ec2-user/application
-
-cd /home/ec2-user/application
-sudo ./mvnw install
+sudo yum install java-11-amazon-corretto-headless
