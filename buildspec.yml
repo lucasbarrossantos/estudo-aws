@@ -13,7 +13,6 @@ artifacts:
     - target/*.jar
     - script/*.sh
     - appspec.yml
-    - buildspec.yml
   discard-paths: yes
 
 cache:
