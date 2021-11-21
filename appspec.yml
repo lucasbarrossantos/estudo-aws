@@ -1,18 +1,22 @@
 version: 0.0
 os: linux
 files:
-  - source: /
+  - source: estudoapp.war
     destination: /home/ec2-user/application
 hooks:
   ApplicationStop:
     - location: script/script_stop_server.sh
-      timeout: 180
+      timeout: 300
+      runas: root
   Install:
     - location: script/script_install.sh
-      timeout: 180
+      timeout: 300
+      runas: root
   ApplicationStart:
     - location: script/script_start_server.sh
-      timeout: 180
+      timeout: 300
+      runas: root
   ValidateService:
     - location: script/script_validate_application.sh
-      timeout: 180
+      timeout: 300
+      runas: root

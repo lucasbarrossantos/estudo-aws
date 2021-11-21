@@ -14,7 +14,8 @@ phases:
       - mvn package
 artifacts:
   files:
-    - target/estudoapp.war
+    - target/*.war
     - appspec.yml
-    - script/*
+    - scripts/*.sh
     - ./mvnw
+  discard-paths: yes
