@@ -3,20 +3,27 @@ os: linux
 files:
   - source: /
     destination: /home/ec2-user/application/target
+
+permissions:
+  - object: /
+    pattern: "**"
+    owner: ec2-user
+    group: ec2-user
+
 hooks:
   ApplicationStop:
     - location: script/script_stop_server.sh
-      timeout: 300
-      runas: root
+      timeout: 20
+      runas: ec2-user
   Install:
     - location: script/script_install.sh
-      timeout: 300
-      runas: root
+      timeout: 20
+      runas: ec2-user
   ApplicationStart:
     - location: script/script_start_server.sh
-      timeout: 300
-      runas: root
+      timeout: 20
+      runas: ec2-user
   ValidateService:
     - location: script/script_validate_application.sh
-      timeout: 300
-      runas: root
+      timeout: 20
+      runas: ec2-user
