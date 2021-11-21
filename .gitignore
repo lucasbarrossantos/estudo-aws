@@ -5,7 +5,6 @@ target/
 !**/src/test/**
 
 .mvn
-mvnw
 mvnw.cmd
 
 ### STS ###
