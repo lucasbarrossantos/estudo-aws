@@ -1,8 +1,8 @@
 version: 0.0
 os: linux
 files:
-  - source: /
-    destination: /home/ec2-user/application
+  - source: estudoapp.war
+    destination: /home/ec2-user/application/target
 hooks:
   ApplicationStop:
     - location: script/script_stop_server.sh
