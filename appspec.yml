@@ -1,7 +1,7 @@
 version: 0.0
 os: linux
 files:
-  - source: estudoapp.jar
+  - source: /
     destination: /home/ec2-user/app
 
 permissions:
@@ -12,22 +12,22 @@ permissions:
 
 hooks:
   ApplicationStop:
-    - location: script/script_stop_server.sh
-      timeout: 30
+    - location: script_stop_server.sh
+      timeout: 300
       runas: ec2-user
   BeforeInstall:
-    - location: script/script_before_install.sh
+    - location: script_before_install.sh
       timeout: 300
       runas: ec2-user
   Install:
-    - location: script/script_install.sh
+    - location: script_install.sh
       timeout: 400
       runas: ec2-user
   ApplicationStart:
-    - location: script/script_start_server.sh
+    - location: script_start_server.sh
       timeout: 300
       runas: ec2-user
   ValidateService:
-    - location: script/script_validate_application.sh
+    - location: script_validate_application.sh
       timeout: 60
       runas: ec2-user
