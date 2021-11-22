@@ -15,7 +15,7 @@ public class LivroService implements LivroServicePort {
         return Collections
                 .singletonList(
                         LivroDTO.builder()
-                                .autor("Lucas Barros Santos")
+                                .autor("AWS Code Deploy")
                                 .nome("Pipeline of a Spring Boot Application on AWS!")
                                 .dataHoraPublicacao(LocalDateTime.now())
                                 .descricao("")
