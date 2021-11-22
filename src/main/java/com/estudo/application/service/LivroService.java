@@ -16,7 +16,7 @@ public class LivroService implements LivroServicePort {
                 .singletonList(
                         LivroDTO.builder()
                                 .autor("Lucas Barros Santos")
-                                .nome("Exemplo de aplicacao Java com CodeDeploy na AWS")
+                                .nome("CodeDeploy na AWS")
                                 .dataHoraPublicacao(LocalDateTime.now())
                                 .descricao("")
                                 .build());
