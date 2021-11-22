@@ -13,18 +13,18 @@ permissions:
 
 hooks:
   ApplicationStop:
-    - location: stop_application.sh
+    - location: scripts/stop_application.sh
       timeout: 300
       runas: ec2-user
   BeforeInstall:
-    - location: before_install.sh
+    - location: scripts/before_install.sh
       timeout: 300
       runas: ec2-user
   ApplicationStart:
-    - location: start_application.sh
+    - location: scripts/start_application.sh
       timeout: 300
       runas: ec2-user
   ValidateService:
-    - location: basic_health_check.sh
+    - location: scripts/basic_health_check.sh
       timeout: 300
       runas: ec2-user
