@@ -1,5 +1,6 @@
 version: 0.0
 os: linux
+
 files:
   - source: /
     destination: /home/ec2-user/app
@@ -12,22 +13,18 @@ permissions:
 
 hooks:
   ApplicationStop:
-    - location: script_stop_server.sh
+    - location: stop_application.sh
       timeout: 300
       runas: ec2-user
   BeforeInstall:
-    - location: script_before_install.sh
+    - location: before_install.sh
       timeout: 300
       runas: ec2-user
-  Install:
-    - location: script_install.sh
-      timeout: 400
-      runas: ec2-user
   ApplicationStart:
-    - location: script_start_server.sh
+    - location: start_application.sh
       timeout: 300
       runas: ec2-user
   ValidateService:
-    - location: script_validate_application.sh
-      timeout: 60
+    - location: basic_health_check.sh
+      timeout: 300
       runas: ec2-user
