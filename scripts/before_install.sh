@@ -2,5 +2,5 @@
 
 sudo yum install java-11-amazon-corretto-headless -y
 
-cd /home/ec2-user/app
+cd /home/ec2-user
 sudo ./mvnw clean install
