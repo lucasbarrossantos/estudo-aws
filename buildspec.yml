@@ -1,6 +1,9 @@
 version: 0.2
 
 phases:
+  install:
+    runtime-versions:
+      java: corretto8
   build:
     commands:
       - echo Build started on `date`
@@ -12,6 +15,5 @@ phases:
 artifacts:
   files:
     - target/*.jar
-    - scripts/*
     - appspec.yml
   discard-paths: yes
